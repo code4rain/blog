@@ -1,0 +1,12 @@
+# Site settings
+title: Alex Kyoungdon's Blog
+email: code4rain@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+        Alex Kyoungdon Jang's Blog.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://code4rain.github.io" # the base hostname & protocol for your site
+twitter_username: code4rain
+github_username:  code4rain
+
+# Build settings
+markdown: kramdown
