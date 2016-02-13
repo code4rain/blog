@@ -3,7 +3,6 @@ layout: post
 title: "TMUX설정"
 date: 2014-08-06 16:46
 comments: true
-categories: Tool
 ---
 
 ## TMUX

@@ -3,7 +3,6 @@ layout: post
 title: "Change Outlook Subject with Python"
 date: 2014-03-24 10:42
 comments: true
-categories: [Python, Outlook]
 ---
 
 ## Progress..
