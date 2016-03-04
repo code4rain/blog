@@ -9,4 +9,8 @@ twitter_username:
 github_username:  code4rain
 
 # Build settings
-markdown: kramdown
+markdown: redcarpet
+gems:
+  - jekyll-gist
+gist:
+  noscript: false

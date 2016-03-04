@@ -64,7 +64,8 @@ __이힝~__
 
 스크립트를 작성합니다. 아래 내용을 복붙해서 conversation.py로 만듭니다.
 python이 제대로 설치되었다면 conversation.py를 double click하면 잘 실행이 됩니다.
-{% gist 28057bc26d7ba343e59f %}
+
+{% gist code4rain/28057bc26d7ba343e59f conversation.py %}
 
 메일이 오면 자동으로 변경해주는 건 VBA스크립트를 만들어야 합니다.
 
