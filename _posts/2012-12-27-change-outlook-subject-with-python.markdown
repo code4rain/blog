@@ -64,59 +64,7 @@ __이힝~__
 
 스크립트를 작성합니다. 아래 내용을 복붙해서 conversation.py로 만듭니다.
 python이 제대로 설치되었다면 conversation.py를 double click하면 잘 실행이 됩니다.
-
-``` python
-import os, sys, re
-import win32com.client
-
-from win32com.client import Dispatch, constants
-
-def parse_folder(folder):
-    print "Processing ## %s "%folder.Name.encode('euc-kr')
-    items = folder.Items
-    while True:
-        item = items.GetNext()
-        if item == None:
-            print "Done"
-            break
-        #print '\n'.join(dir(item))
-
-        objrdoitem = session.GetMessageFromID(item.EntryID, item.Parent.StoreID)
-
-        sys.stdout.write('.')
-
-        if objrdoitem.ConversationIndex == '' :
-            continue
-
-        if objrdoitem.ConversationIndex != '' :
-            objrdoitem.ConversationIndex = ''
-            objrdoitem.Save()
-
-        if re.compile(r'(Re|RE|Fwd|FW|Rq)+:*\s*:*(\d+|\[\d+\]|\(x*\d+\)|:|\*\d+|\(\d+\))+\s*:*\s*').search(item.ConversationTopic):
-            NewTopic = re.sub(r'(Re|RE|Fwd|FW)+:*\s*:*(\d+|\[\d+\]|\(x*\d+\)|:|\*\d+|\(\d+\))+\s*:*\s*','', item.ConversationTopic)
-            objrdoitem.ConversationTopic = NewTopic
-            objrdoitem.Save()
-
-        if re.compile(r'(Re|RE|Fwd|FW|Rq)+:*\s*:*(\d+|\[\d+\]|\(x*\d+\)|:|\*\d+|\(\d+\))+\s*:*\s*').search(item.Subject):
-            NewTopic = re.sub(r'(Re|RE|Fwd|FW)+:*\s*:*(\d+|\[\d+\]|\(x*\d+\)|:|\*\d+|\(\d+\))+\s*:*\s*','', item.Subject)
-            objrdoitem.ConversationTopic = NewTopic
-            objrdoitem.Save()
-            #break
-
-    for i in range(1, folder.Folders.Count + 1):
-        parse_folder(folder.Folders[i])
-
-win32com.client.gencache.EnsureDispatch("Outlook.Application")
-outlook = win32com.client.Dispatch("Outlook.Application")
-mapi = outlook.GetNamespace('MAPI')
-mapi.Logon()
-session = win32com.client.Dispatch("Redemption.RDOSession")
-session.Logon()
-#top = mapi.Folders.Item("Archives")
-for i in range(1, mapi.Folders.Count + 1):
-        parse_folder(mapi.Folders[i])
-
-```
+{% gist 28057bc26d7ba343e59f %}
 
 메일이 오면 자동으로 변경해주는 건 VBA스크립트를 만들어야 합니다.
 
