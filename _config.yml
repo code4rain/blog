@@ -86,9 +86,17 @@ text:
   og_locale: 'en_US'
 
 # Build settings
-markdown:     kramdown
+markdown:     redcarpet
 redcarpet:
-  extensions: ['smart', 'tables', 'with_toc_data']
+    extensions: 
+      - no_intra_emphasis
+      - fenced_code_blocks
+      - tables
+      - strikethrough
+      - superscript
+      - autolink
+      - hard_wrap
+      - smart
 permalink:    pretty
 paginate:     4
 sass:
