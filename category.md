@@ -36,7 +36,6 @@ Here we generate all the categories.
         <a href="#{{ ct | slugify }}" class="codinfox-category-mark" style="color:#999;text-decoration: none;"> {{ ct }} </a> &nbsp;&nbsp;
         {% endfor %}
         <a href="#no-category" class="codinfox-category-mark" style="color:#999;text-decoration: none;"> No Category </a> &nbsp;&nbsp;
-    </p>
 
     {% for ct in cats %}
     <h1 id="{{ ct | slugify }}">{{ ct }}</h1>
