@@ -86,7 +86,7 @@ text:
   og_locale: 'en_US'
 
 # Build settings
-markdown:     redcarpet
+markdown:     kramdown
 redcarpet:
     extensions:
       - no_intra_emphasis
