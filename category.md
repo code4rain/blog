@@ -50,11 +50,11 @@ Here we generate all the categories.
                     <small>{{ post.date | date_to_string }}</small>
             </h2>
                 &nbsp;&nbsp;&nbsp;
-		<h3>
+		<h4>
                 {% for tag in post.tags %}
                 <a class="codinfox-tag-mark" href="/blog/tag/#{{ tag | slugify }}">{{ tag }}</a> /
                 {% endfor %}
-		</h3>
+		</h4>
         </li>
         {% endif %}
         {% endfor %}
@@ -71,11 +71,11 @@ Here we generate all the categories.
                     {{ post.title }}</a>
                     &nbsp;&nbsp;&nbsp;<small>{{ post.date | date_to_string }}</small></h2>
 		    &nbsp;&nbsp;&nbsp;
-		    <h3>
+		 <h4>
                     {% for tag in post.tags %}
                 <a class="codinfox-tag-mark" href="/blog/tag/#{{ tag | slugify }}">{{ tag }}</a> /
                 {% endfor %}
-		</h3>
+		</h4>
         </li>
         {% endunless %}
         {% endfor %}
