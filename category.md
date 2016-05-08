@@ -49,7 +49,6 @@ Here we generate all the categories.
                     {{ post.title }}</a>&nbsp;&nbsp;&nbsp;
                     <small>{{ post.date | date_to_string }}</small>
             </h2>
-                &nbsp;&nbsp;&nbsp;
 		<h4>
                 {% for tag in post.tags %}
                 <a class="codinfox-tag-mark" href="/blog/tag/#{{ tag | slugify }}">{{ tag }}</a> /
@@ -70,7 +69,6 @@ Here we generate all the categories.
                 <a href="{{ post.url }}">
                     {{ post.title }}</a>
                     &nbsp;&nbsp;&nbsp;<small>{{ post.date | date_to_string }}</small></h2>
-		    &nbsp;&nbsp;&nbsp;
 		 <h4>
                     {% for tag in post.tags %}
                 <a class="codinfox-tag-mark" href="/blog/tag/#{{ tag | slugify }}">{{ tag }}</a> /
