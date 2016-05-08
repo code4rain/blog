@@ -6,6 +6,7 @@ category: computer
 tags: [git, gtags, gnu]
 comments: true
 ---
+Tumblr에 작성했던 내용을 옮겨왔습니다. 기존에는 vi와 cscope를 활용해서 tag를 관리하다가 gnu에서 만든 global(gtags)를 알게되서 이를 활용할 수 있는 방법을 찾아보던 중에 ctags와 git을 활용하는 방법이 있어 이를 개선해서 gtags용으로 변경한 방법을 공유합니다.
 
 # Why GTAGS([GNU Global](https://www.gnu.org/software/global/))?
 
