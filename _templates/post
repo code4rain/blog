@@ -2,5 +2,7 @@
 layout: {{ layout }}
 title: "{{ title }}"
 date: {{ date }}
+category:
+tags: []
 comments: true
 ---

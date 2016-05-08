@@ -1,5 +1,5 @@
 # Site settings
-title: Alex Kyoungdon's Blog
+title: Alex Kyoungdon Jang's Blog
 email: code4rain@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
         Alex Kyoungdon Jang's Blog.
@@ -88,7 +88,7 @@ text:
 # Build settings
 markdown:     redcarpet
 redcarpet:
-    extensions: 
+    extensions:
       - no_intra_emphasis
       - fenced_code_blocks
       - tables
